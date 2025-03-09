@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="p-4">
+        <input type="text" class="form-control" placeholder="Search" [formControl]="searchInput" />
+    </div>
+    <div class="row p-1 m-1">
+        <div class="col-md-4" *ngFor="let user of users">
+            <div class="card m-1">
+                <div class="card-body">
+                    <h5 class="card-title">{{user.name}}</h5>
+                    <p class="card-text">{{user.email}}</p> 
+                    <a [routerLink]="['/users/', user.id]" class="btn btn-primary">View</a>
+        </div>
+    </div>
+</div>
